@@ -1,0 +1,311 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background for ticket cancel page */
+body.ticketcancel-bg {
+    background-image: url('../image/ticketcancel.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body {
+    background-image: url('../image/admin.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    background: #2c3e50;
+    padding-top: 20px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+}
+
+.sidebar header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.sidebar header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ecf0f1;
+}
+
+.sidebar header p {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    color: #ecf0f1;
+    font-weight: 600;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    padding: 0 15px;
+}
+
+.sidebar ul li a {
+    color: #bdc3c7;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    background: #34495e;
+    color: #ecf0f1;
+    transform: translateX(5px);
+    
+}
+
+.content {
+    margin-left: 250px;
+    padding: 30px;
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,0.3);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.card span {
+    font-size: 2rem;
+    font-weight: 700;
+    display: block;
+    margin: 15px 0;
+    color: white;
+}
+
+.card a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.card a:hover {
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+/* Card color themes */
+.bookings { background: linear-gradient(135deg, #2980b9, #f16161); }
+.buses { background: linear-gradient(135deg, #27ae60, #ece00c); }
+.routes { background: linear-gradient(135deg, #e74c3c, #14abe2); }
+.seats { background: linear-gradient(135deg, #f39d12, #a5e80a); }
+.customers { background: linear-gradient(135deg, #8e44ad, #1527ee); }
+.admins { background: linear-gradient(135deg, #7f8c8d, #363227fb); }
+.earnings { background: linear-gradient(135deg, #16a085, #3da2cd); }
+.messages { background: linear-gradient(135deg, #1507dd, #e74c3c); }
+
+h1 {
+    color: #f2c30a;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+}
+
+h1 span {
+    color: #2980b9;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+    
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        margin-top: 40px;
+    }
+}
+
+.table {
+    width: 100%; /* Expand the table width to occupy more space */
+    margin: 0 auto; /* Center the table */
+    border-collapse: separate;
+    background-color: white;
+    border-spacing: 0;
+    color: black;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #13c8e0;
+}
+
+.table th {
+    background: linear-gradient(145deg, #2980b9, #2c3e50);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.table td {
+    font-size: 0.9rem;
+   
+}
+
+/* Hover Effect */
+.table tr:hover td {
+    background: #f1f4f7;
+    cursor: pointer;
+}
+
+
+.btn{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-update {
+    background-color:green;
+    
+}
+
+.btn-delete {
+    background-color: red;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-add {
+    display: block;
+    margin: 15px auto; /* Reduce the margin for the button */
+    padding: 8px 16px; /* Reduce the size of the button */
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-add:hover {
+    background-color: darkblue;
+}
+
+.btn-update:hover  {
+    
+        border-color: rgb(178, 237, 40); 
+        box-shadow: 0 0 10px lightgreen;  
+
+}
+
+.btn-delete:hover  {
+    
+    border-color: rgb(169, 5, 5); 
+    box-shadow: 0 0 10px rgb(125, 30, 19);  
+
+}
+
+.btn-download {
+    background-color: #4CAF50;
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: rgb(232, 232, 11);
+    border-radius: 5px;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+
+
+.seats-info {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 5px 0;
+    height: 10px;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4caf50; /* Green color for available seats */
+    width: 0%;
+    transition: width 0.3s ease;
+}

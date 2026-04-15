@@ -1,0 +1,97 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background for login menu page */
+body.login-menu-bg {
+    background-image: url('../image/menu.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+.login-container {
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+/* Title Styling */
+.login-title {
+    font-size: 50px;
+    color: rgb(50, 17, 17);
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Login Options Container */
+.login-options {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Login Cards */
+.login-card {
+    width: 400px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.login-card a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+}
+
+.login-card:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .login-title {
+        font-size: 36px;
+    }
+
+    .login-card {
+        width: 300px;
+        padding: 15px;
+    }
+
+    .login-card a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login-title {
+        font-size: 28px;
+    }
+
+    .login-card {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .login-card a {
+        font-size: 18px;
+    }
+}
